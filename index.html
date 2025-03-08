@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="row justify-content-center mt-5"> <!-- creates a bootstrap environment-->
+        <div class="col-10">
+            <!-- form complex example -->
+            <div class="card card-outline-secondary"> <!-- creates a card with a gray outline-->
+                <div class="card-header bg-primary text-white">
+                    <h2>Payment Form Example</h2>
+                </div>
+                <div class="card-body">
+                    <div id="error" class="alert alert-danger">Some fields are missing</div>
+                    <form method="post" action="#">
+                        <!-- how the form data will be sent to the server, action=# <form method="post" action="https://example.com/login"> -->
+                        <div class="row">
+                            <div class="col-5 p-2">
+                                <label for="exampleCard">Card #</label>
+                                <input class="form-control" id="exampleCard" placeholder="XXXXXXXXXXXXXXXX" type="text">
+                            </div>
+                            <div class="col-3 p-2">
+                                <label for="exampleCVC">CVC #</label>
+                                <input class="form-control" id="exampleCVC" placeholder="0000" type="text">
+                            </div>
+                            <div class="col-4 p-2">
+                                <label for="exampleAmount">Amount</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <!-- <i class="fas fa-dollar-sign me-2"></i> -->
+                                        <span class="input-group-text" id="basic-addon1">$</span>
+                                    </div>
+                                    <input class="form-control" id="exampleAmount" placeholder="Amount" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 p-2">
+                                <label for="exampleFirstName">First Name</label>
+                                <input class="form-control" id="exampleFirstName" placeholder="First Name" type="text">
+                            </div>
+                            <div class="col-6 p-2">
+                                <label for="exampleLastName">Last Name</label>
+                                <input class="form-control" id="exampleLastName" placeholder="Last Name" type="text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 p-2">
+                                <label for="exampleCity">City</label>
+                                <input class="form-control" id="exampleCity" placeholder="City" type="text">
+                            </div>
+                            <div class="col-3 p-2">
+                                <label for="exampleState">State</label>
+                                <select class="form-control class=" form-label custom-select id="exampleState">
+                                    <option class="text-primary bg-secondary">
+                                        Pick a state
+                                    </option>
+                                    <option value="AG">
+                                        Aguascalientes
+                                    </option>
+                                    <option value="BC">
+                                        Baja California
+                                    </option>
+                                    <option value="BCS">
+                                        Baja California Sur
+                                    </option>
+                                    <option value="CAM">
+                                        Campeche
+                                    </option>
+                                    <option value="CHIA">
+                                        Chiapas
+                                    </option>
+                                    <option value="CHIH">
+                                        Chihuahua
+                                    </option>
+                                    <option value="CDMX">
+                                        Ciudad de México
+                                    </option>
+                                    <option value="COA">
+                                        Coahuila
+                                    </option>
+                                    <option value="COL">
+                                        Colima
+                                    </option>
+                                    <option value="DGO">
+                                        Durango
+                                    </option>
+                                    <option value="EDOMEX">
+                                        Estado de México
+                                    </option>
+                                    <option value="GTO">
+                                        Guanajuato
+                                    </option>
+                                    <option value="GRO">
+                                        Guerrero
+                                    </option>
+                                    <option value="HGO">
+                                        Hidalgo
+                                    </option>
+                                    <option value="JAL">
+                                        Jalisco
+                                    </option>
+                                    <option value="MICH">
+                                        Michoacán
+                                    </option>
+                                    <option value="MOR">
+                                        Morelos
+                                    </option>
+                                    <option value="NAY">
+                                        Nayarit
+                                    </option>
+                                    <option value="NL">
+                                        Nuevo León
+                                    </option>
+                                    <option value="OAX">
+                                        Oaxaca
+                                    </option>
+                                    <option value="PUE">
+                                        Puebla
+                                    </option>
+                                    <option value="QRO">
+                                        Querétaro
+                                    </option>
+                                    <option value="QUI">
+                                        Quintana Roo
+                                    </option>
+                                    <option value="SLP">
+                                        San Luis Potosi
+                                    </option>
+                                    <option value="SIN">
+                                        Sinaloa
+                                    </option>
+                                    <option value="SON">
+                                        Sonora
+                                    </option>
+                                    <option value="TAB">
+                                        Tabasco
+                                    </option>
+                                    <option value="TAM">
+                                        Tamaulipas
+                                    </option>
+                                    <option value="TLX">
+                                        Tlaxcala
+                                    </option>
+                                    <option value="VER">
+                                        Veracruz
+                                    </option>
+                                    <option value="YUC">
+                                        Yucatán
+                                    </option>
+                                    <option value="ZAC">
+                                        Zacatecas
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-3 p-2">
+                                <label for="exampleZip">Postal Code</label>
+                                <input class="form-control" id="exampleZip" type="text" placeholder="Postal Code">
+                            </div>
+                            <div class="row">
+                                <div class="col-6 p-2">
+                                    <!-- since col is 6 then it is occuppying 6 columns and leaves the space for the inline element to be in the far right end-->
+                                    <p for="exampleCard">We Accept:</p>
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <!--btn-group groups multiple buttons together to behave as a single component, data-toggle="buttons" enables button-style toggles for radio buttons or checkboxes.
+                                        when one button is clicked, it visually "activates" (changes color, background, etc.) and automatically deactivates other buttons in the group..-->
+                                        <label class="btn btn-secondary">
+                                            <input autocomplete="off" checked id="card" name="options" type="radio">
+                                            <!-- input  allows the user to select only one option from a group of options;
+                                              1.autocomplete "off" disables the browser's auto filling bejavior since some browsers may pre-fill the radio button based on previous user inputs
+                                              2. checked pre selects the radio button when page loads, Mastercard option will already be selected by default when the page loads
+                                              3. id="card" gives radio button a unique identifier, clicking the label would also activate the radio button
+                                              4. name="options" groups radio buttons together, only one can be selected at a time-->
+                                            <i class="fab fa-cc-mastercard"></i>
+                                            <input autocomplete="off" checked id="card" name="options" type="radio">
+                                            <i class="fab fa-cc-visa"></i>
+                                            <input autocomplete="off" checked id="card" name="options" type="radio">
+                                            <i class="fab fa-cc-diners-club"></i>
+                                            <input autocomplete="off" checked id="card" name="options" type="radio">
+                                            <i class="fab fa-cc-amex"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 p-2">
+                                    <label for="textbox">Message</label>
+                                    <textarea class="form-control" id="textbox" rows="3"></textarea>
+                                    <small class="text-secondary">Add any notes here.</small>
+                                    <!--text below textbox for notes or help-->
+                                </div>
+                            </div>
+                    </form>
+                    <div class="card-footer">
+                        <div class="text-end">
+                            <button class="btn btn-secondary" type="reset">Cancel</button>
+                            <button id="sendForm" class="btn btn-primary" type="button">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- <h1>Form</h1>
+
+ 
+    <form> 
+        
+       el formulario es todo lo que esté dentro de la etiqueta form -->
+
+<!-- <input type="text"> ingresar texto
+<input type="radio"> marcar seleccion 
+<input type="password">
+<input type="checkbox">
+<input type="email">
+<input type="submit"
+
+
+
+        <label for="nombre">Nombre</label>
+        <input type="text" required id="nombre"> al dar click en el "label" entonces se selecciona donde debe ir el campo 
+
+
+        <input type="email" required>
+        <input type="radio">
+        <input type="password">
+        <input type="checkbox">
+        <button type="submit"> enviar </button>
+    </form>
+
+
+
+
+ -->
